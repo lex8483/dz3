@@ -6,6 +6,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -33,7 +34,7 @@ public class Main {
     }
 
     public static void task3() {
-        var year = 2400;
+        var year = 1963;
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else System.out.println(year + " год не является високосным");
@@ -53,13 +54,12 @@ public class Main {
         if (deliveryDistance > 100) {
             day++;
             System.out.println("Потребуется дней более: " + day);
-        } else
-            System.out.println("Потребуется дней: " + day);
+        } else System.out.println("Потребуется дней: " + day);
         System.out.println("---------------------------------------------------------------");
     }
 
     public static void task5() {
-        int monthNumber = 11;
+        int monthNumber = 7;
         switch (monthNumber) {
             case 12:
             case 1:
@@ -83,10 +83,29 @@ public class Main {
                 break;
             default:
                 System.out.println("такого месяца не существует");
-
         }
+    }
 
+    public static void task6() {
+        int age = 19;
+        int salary = 58_000;
+        if (age >= 23 && salary < 50_000) {
+            salary *= 3;
+        } else if (age >= 23 && salary >= 50_000 && salary < 80_000) {
+            salary *= 1.2 * 3;
+        } else if (age >= 23 && salary >= 80_000) {
+            salary *= 1.5 * 3;
+        }
+        if (age < 23 && salary < 50_000) {
+            salary *= 2;
+        } else if (age < 23 && salary >= 50_000 && salary < 80_000) {
+            salary *= 1.2 * 2;
+        } else if (age < 23 && salary >= 80_000) {
+            salary *= 1.5 * 2;
+        }
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + salary + " рублей");
 
     }
+
 
 }
