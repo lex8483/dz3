@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
@@ -10,10 +11,15 @@ public class Main {
     }
 
     public static void task1() {
-        boolean clientOS = true;
-        if (clientOS) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else System.out.println("Установите версию приложения для Android по ссылке");
+        String clientOS;
+        //boolean clientOS = true;
+        System.out.print("Введите ОС Андроид - 1, IOS -0 : ");
+        Scanner rew = new Scanner(System.in);
+        clientOS = rew.next();
+        if (clientOS.equals("1")) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS.equals("0"))
+        System.out.println("Установите версию приложения для iOS по ссылке");
         System.out.println("------------------------------------------------------------------");
     }
 
