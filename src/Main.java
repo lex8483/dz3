@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class Main {
         if (clientOS.equals("1")) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else if (clientOS.equals("0"))
-        System.out.println("Установите версию приложения для iOS по ссылке");
+            System.out.println("Установите версию приложения для iOS по ссылке");
         System.out.println("------------------------------------------------------------------");
     }
 
@@ -90,6 +91,7 @@ public class Main {
             default:
                 System.out.println("такого месяца не существует");
         }
+        System.out.println("---------------------------------------------------------------");
     }
 
     public static void task6() {
